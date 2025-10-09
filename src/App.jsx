@@ -40,7 +40,7 @@ export default function App() {
             <form className="search" onSubmit={handleSearch}>
                 <input
                     type="text"
-                    placeholder="Type a country (e.g., Japan)..."
+                    placeholder="Type a country (e.g., Cuba)..."
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     aria-label="Country name"
@@ -68,12 +68,7 @@ export default function App() {
                         <p><strong>Population:</strong> {country.population?.toLocaleString() || '—'}</p>
                         <p><strong>Languages:</strong> {country.languages ? Object.values(country.languages).join(', ') : '—'}</p>
                         <p>
-                            <strong>Currencies:</strong>{' '}
-                            {country.currencies
-                                ? Object.values(country.currencies)
-                                    .map((c) => `${c.name} (${c.symbol || ''})`.trim())
-                                    .join(', ')
-                                : '—'}
+                            <strong>Currencies:</strong>{' '}{country.currencies ? Object.values(country.currencies).map((c) => `${c.name} (${c.symbol || ''})`.trim()).join(', ') : '—'}
                         </p>
                         <p><strong>Codes:</strong> {country.cca2} / {country.cca3}</p>
                     </div>

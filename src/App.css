@@ -1,8 +1,10 @@
 body {
     margin: 0;
+    background-image: url('https://www.transparenttextures.com/patterns/old-map.png');
     place-content: center;
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     background-color: #EED9B7;
+    background-repeat: repeat;
 }
 
 /* container */
@@ -15,6 +17,9 @@ body {
 
 /* heading */
 h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #3b2f2f; /* looks good on the tan background */
     margin: 0 0 16px;
 }
 
