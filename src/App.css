@@ -17,9 +17,9 @@ body {
 
 .title {
     display: flex;
-    align-items: center;   /* centers vertically */
-    justify-content: center; /* centers horizontally */
-    gap: 10px;             /* space between text and icon */
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     margin-bottom: 16px;
 }
 
@@ -34,7 +34,7 @@ body {
 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
-    color: #3b2f2f; /* looks good on the tan background */
+    color: #3b2f2f; /*l peak background tan color right here */
     margin: 0 0 16px;
 }
 
