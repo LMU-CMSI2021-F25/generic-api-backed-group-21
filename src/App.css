@@ -15,6 +15,21 @@ body {
     padding: 24px;
 }
 
+.title {
+    display: flex;
+    align-items: center;   /* centers vertically */
+    justify-content: center; /* centers horizontally */
+    gap: 10px;             /* space between text and icon */
+    margin-bottom: 16px;
+}
+
+.title-icon {
+    width: 60px;
+    height: 60px;
+    opacity: 0.9;
+    filter: sepia(40%) saturate(80%) brightness(95%);
+}
+
 /* heading */
 h1 {
     font-family: 'Playfair Display', serif;

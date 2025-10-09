@@ -34,7 +34,10 @@ export default function App() {
 
     return (
         <div className="App">
-            <h1>World Navigator</h1>
+            <div className="title">
+                <h1>World Navigator</h1>
+                <img src="/compass.png" alt="Compass icon" className="title-icon" />
+            </div>
 
             {/*Search Bar*/}
             <form className="search" onSubmit={handleSearch}>
