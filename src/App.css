@@ -1,42 +1,97 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+    margin: 0;
+    place-content: center;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background-color: #EED9B7;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* container */
+.App {
+    place-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* heading */
+h1 {
+    margin: 0 0 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* search row */
+.search {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
 }
 
+.search input {
+    color: black;
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #c7b08b;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #fff8ee;
+}
+
+.search button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #8b6f47;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.search button:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+/* error */
+.error {
+    color: #7a1f1f;
+    background: #ffe6e6;
+    border: 1px solid #f2b9b9;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin: 8px 0 16px;
+}
+
+/* result card */
 .card {
-  padding: 2em;
+    color: black;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 16px;
+    background: #fffdf7;
+    border: 1px solid #d9c8a7;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(60, 40, 20, 0.08);
 }
 
-.read-the-docs {
-  color: #888;
+.flag-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f1e3;
+    border-radius: 10px;
+    padding: 8px;
+    border: 1px dashed #d1b88f;
+}
+
+.flag-wrap img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.details h2 {
+    margin: 0 0 8px;
+}
+
+.details p {
+    margin: 6px 0;
 }
