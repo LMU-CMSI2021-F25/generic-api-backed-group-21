@@ -16,16 +16,14 @@ export default function App() {
         setCountry(null);
 
         try {
-            // REST Countries v3.1
-            const url = `https://restcountries.com/v3.1/name/${encodeURIComponent(
-                query.trim()
-            )}?fields=name,flags,capital,region,subregion,population,currencies,languages,cca2,cca3`;
+            // API Used: REST Countries v3.1
+            const url = `https://restcountries.com/v3.1/name/${encodeURIComponent(query.trim())}?fields=name,flags,capital,region,subregion,population,currencies,languages,cca2,cca3`;
             const res = await fetch(url);
             if (!res.ok) {
                 throw new Error('Country not found');
             }
             const data = await res.json();
-            // They can return multiple matches; take the first for simplicity
+            // TODO: Takes first match which works most of the time but sometimes returns wrong result
             setCountry(data[0]);
         } catch (e) {
             setErr(e.message || 'Something went wrong');
@@ -36,9 +34,9 @@ export default function App() {
 
     return (
         <div className="App">
-            <h1>Country Finder</h1>
+            <h1>World Navigator</h1>
 
-            {/* Search bar */}
+            {/*Search Bar*/}
             <form className="search" onSubmit={handleSearch}>
                 <input
                     type="text"
@@ -52,10 +50,10 @@ export default function App() {
                 </button>
             </form>
 
-            {/* Error */}
+            {/* This is the error call */}
             {err && <p className="error">{err}</p>}
 
-            {/* Result */}
+            {/* Result print if success */}
             {country && (
                 <div className="card">
                     <div className="flag-wrap">
